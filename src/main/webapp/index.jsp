@@ -1,40 +1,30 @@
-<!doctype html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-<script src="app.js"></script>
-
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
 </head>
-<body ng-app="teste">
-  <form ng-controller="ControllerAlunos as alunos" novalidate>
-    <H2>
+<body>
+     <H1>
 <div>
-Aluno
+Recolhe Recicláveis
 </div>
-</H2>
-    <p>Nome:
-      <input type="text" ng-model="alunos.aluno.nome">
-    </p>
-    <p>Matricula:
-      <input type="text" ng-model="alunos.aluno.matricula">
-    </p>
-    <p>Email:
-      <input type="email" ng-model="alunos.aluno.email">
-    </p>
-    <p>Nascimento:
-      <input type="date" ng-model="alunos.aluno.nascimento">
-    </p>
-    <p>
-      <input type="button" value="Salvar" ng-click="alunos.addAlunoRest();">
-    </p>
-    <p>
-        <div ng-repeat="aluno in alunos.db">
-          <p>Nome: {{aluno.nome}}</p>
-          <p>Nascimento: {{aluno.nascimento}}</p>
-          <p>Email: {{aluno.email}}</p>
-          <p>Matricula: {{aluno.matricula}}</p>
-        </div>
-      </p>
-  </form>
+
+</H1>
+
+<div>
+<p>
+<a href="cadastrousuario.jsp" target="_self">Cadastro Usuário</a>
+</p>
+<p>
+<a href="cadastrocooperativa.jsp" target="_self">Cadastro Cooperativa</a>
+</p>
+<p>
+<a href="coleta.jsp" target="_self">Solicitar Coleta</a>
+</p>
+</div>
+
 </body>
 </html>
