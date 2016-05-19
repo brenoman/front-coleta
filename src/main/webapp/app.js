@@ -9,6 +9,33 @@
       alert("Cadastro efetuado");
       window.location.reload();
     };
+    this.editarUsuarioRest = function() {
+        $http.post('http://localhost:8080/coletaSeletiva/usuarios/editar', this.usuario);
+        alert("Cadastro atualizado");
+        window.location.reload();
+      };
+    this.excluirUsuarioRest = function(codigo) {
+       $http.post('http://localhost:8080/coletaSeletiva/usuarios/excluir', codigo);
+        alert("Cadastro excluido");
+       window.location.reload();
+      };
+    this.usuarioFinal  = null;
+    this.buscarUsuarioRest = function(codigo) {
+    	var that=this;
+       $http.post('http://localhost:8080/coletaSeletiva/usuarios/buscar', codigo).success(function(data){
+    	   that.usuario = data;
+       });
+       var str = JSON.stringify(that.usuario, null, 2);
+       document.getElementById('email').value = this.usuario.email;
+    };
+    this.dbUsuarios  = [];
+    this.atualizarUsuarios = function() {
+      var that = this;
+    	$http.get('http://localhost:8080/coletaSeletiva/usuarios/').success(function(data){
+    	   that.dbUsuarios = data;
+      });
+    };
+    this.atualizarUsuarios();
     
   }]);
   

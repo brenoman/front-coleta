@@ -19,6 +19,9 @@ Recolhe Recicláveis
 <a href="cadastrousuario.jsp" target="_self">Cadastro Usuário</a>
 </p>
 <p>
+<a href="listausuario.jsp" target="_self">Listar Usuários</a>
+</p>
+<p>
 <a href="cadastrocooperativa.jsp" target="_self">Cadastro Cooperativa</a>
 </p>
 <p>
